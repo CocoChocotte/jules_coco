@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 ArialMT;\f2\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red0\green0\blue0;\red0\green0\blue0;
+\red238\green76\blue77;\red67\green67\blue67;\red26\green26\blue26;\red135\green135\blue135;\red207\green63\blue58;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\cssrgb\c0\c0\c0;\cssrgb\c0\c0\c0;
+\cssrgb\c95686\c39216\c37255;\cssrgb\c33333\c33333\c33333;\cssrgb\c13333\c13333\c13333;\cssrgb\c60000\c60000\c60000;\cssrgb\c85490\c33725\c29020;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww13280\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Pr\'e9requis :\
+\
+Machine virtuelle : Debian\
+\
+Commande pour l\'92installation de packet n\'e9cessaire : (peu n\'e9cessiter le sudo)\
+\
+\pard\pardeftab720\sl340\partightenfactor0
+
+\f1\b\fs28 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec3 apt install python-dev virtualenv python-pip libpq-dev\
+\pard\pardeftab720\partightenfactor0
+\cf2 \kerning1\expnd0\expndtw4
+\outl0\strokewidth0 apt install apache2\
+apt install date
+\f0\b0\fs24 \cf4 \kerning1\expnd0\expndtw4
+\
+\
+Installation du framework laravel 4.2 qui permettra la migration de la base de donn\'e9es ( N\'e9cessite php5 et composer):\
+(https://laravel.com/docs/4.2/installation) \
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs28 \cf2 \expnd0\expndtw0\kerning0
+\shad\shadx0\shady-20\shadr0\shado255 \shadc2 apt\shad\shadx0\shady-20\shadr0\shado255 \shadc2 -\shad\shadx0\shady-20\shadr0\shado255 \shadc2 get install php5\shad\shadx0\shady-20\shadr0\shado255 \shadc2 -\shad\shadx0\shady-20\shadr0\shado255 \shadc2 json (prerequis)
+\b \
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf4 \kerning1\expnd0\expndtw4
+\shad0 \
+\pard\pardeftab720\partightenfactor0
+
+\fs28 \cf7 \expnd0\expndtw0\kerning0
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"\
+php -r "if (hash_file('SHA384', 'composer-setup.php') === '544e09ee996cdf60ece3804abc52599c22b1f40f4323403c44d44fdfdd586475ca9813a858088ffbc1f233e9b180f061') \{ echo 'Installer verified'; \} else \{ echo 'Installer corrupt'; unlink('composer-setup.php'); \} echo PHP_EOL;"\
+php composer-setup.php\
+php -r "unlink('composer-setup.php');"\
+(pour plus d\'92infos : https://getcomposer.org/download/ )\
+\
+\pard\pardeftab720\partightenfactor0
+
+\b0 \cf2 \shad\shadx0\shady-20\shadr0\shado255 \shadc2 composer create\shad\shadx0\shady-20\shadr0\shado255 \shadc2 -\shad\shadx0\shady-20\shadr0\shado255 \shadc2 project laravel\shad\shadx0\shady-20\shadr0\shado255 \shadc2 /\shad\shadx0\shady-20\shadr0\shado255 \shadc2 laravel \shad\shadx0\shady-20\shadr0\shado255 \shadc2 \{\shad\shadx0\shady-20\shadr0\shado255 \shadc2 directory\shad\shadx0\shady-20\shadr0\shado255 \shadc2 \}\shad\shadx0\shady-20\shadr0\shado255 \shadc2  \shad\shadx0\shady-20\shadr0\shado255 \shadc2 4.2\shad\shadx0\shady-20\shadr0\shado255 \shadc2  \shad\shadx0\shady-20\shadr0\shado255 \shadc2 --\shad\shadx0\shady-20\shadr0\shado255 \shadc2 prefer\shad\shadx0\shady-20\shadr0\shado255 \shadc2 -\shad\shadx0\shady-20\shadr0\shado255 \shadc2 dist}
